@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="container">
+		<div id="header">
+			<h1>About Me</h1>
+		</div>
+		<div id="sidebar">
+			<div class="sidebarColumn" onclick="changeTextColor();">
+				<h4> Text </h4>
+				<div id="textColors" class="colors">
+					<input type="radio" name="group1" value="Aqua">Aqua <br>
+					<input type="radio" name="group1" value="BlueViolet">BlueViolet <br>
+					<input type="radio" name="group1" value="DarkGoldenRod">DarkGoldenRod <br>
+					<input type="radio" name="group1" value="Gold">Gold <br>
+					<input type="radio" name="group1" value="Fuchsia">Fuchsia <br>
+					<input type="radio" name="group1" value="LightCoral">LightCoral <br>
+					<input type="radio" name="group1" value="Orange">Orange <br>
+					<input type="radio" name="group1" value="SlateBlue">SlateBlue <br>
+					<input type="radio" name="group1" value="Yellow">Yellow <br>
+					<input type="radio" name="group1" value="Tomato">Aqua <br>
+				</div>
+			</div>
+			<script>
+				function changeTextColor(){
+					var radios = document.getElementsByName('group1');
+					for(var i = 0; i < radios.length; i++){
+						if(radios[i].type == 'radio' && radios[i].checked){
+							var paragraphs = document.getElementsByTagName('p');
+							for(var j = 0; j < paragraphs.length; j++){
+								paragraphs[j].style.color = radios[i].value;
+							}
+						}
+					}
+				}
+			</script>
+			<div class="sidebarColumn" onclick="changeBackgroundColor();">
+				<h4> Background</h4>
+				<div id="backgroundColors" class="colors">
+					<input type="radio" name="group2" value="Aqua">Aqua <br>
+					<input type="radio" name="group2" value="BlueViolet">BlueViolet <br>
+					<input type="radio" name="group2" value="DarkGoldenRod">DarkGoldenRod <br>
+					<input type="radio" name="group2" value="Gold">Gold <br>
+					<input type="radio" name="group2" value="Fuchsia">Fuchsia <br>
+					<input type="radio" name="group2" value="LightCoral">LightCoral <br>
+					<input type="radio" name="group2" value="Orange">Orange <br>
+					<input type="radio" name="group2" value="SlateBlue">SlateBlue <br>
+					<input type="radio" name="group2" value="Yellow">Yellow <br>
+					<input type="radio" name="group2" value="Tomato">Aqua <br>
+				</div>
+			</div>
+			<script>
+				function changeBackgroundColor(){
+					var radios = document.getElementsByName('group2');
+					for(var i = 0; i < radios.length; i++){
+						if(radios[i].type == 'radio' && radios[i].checked){
+							document.getElementById('mainContent').style.backgroundColor = radios[i].value;
+							
+								
+							
+						}
+					}
+				}
+			</script>
+		</div>
+		<div id="mainContent">
+			<br>
+			<div id="mainImage">
+				<img  src="images/assign3_image.jpg"/>
+			</div>
+			<p>
+			Hello, my name is Adrian P. Cagaanan. I am a senior at University of Southern California.
+			My major is computer science and computer engineering. I have 2 siblings. My brother is
+			working on his medical degree and my sister is attending Brown University as undecided. 
+			</p>
+			<h3>Hobbies</h3>
+			<p>
+			My hobbies include tennis, reditting, and watching game of thrones. I love watching wimbledon. 
+			So, it's no surprise that my favorite grass to play on is grass even though I've played on that surface
+			only once. My favorite player is novak djokovic. I'm also an avid redditor. My favorite subreddits are /r/aww 
+			and /r/photoshopbattles. Lastly, I love watching game of thrones. Arya Stark is my favorite character. 
+			</p>
+			<h3> High School</h3>
+			<p>
+			I attended high school at St. Edmond. It was a catholic, private school. My extracurricular activities
+			included choir, jazz band, and speech. I was the piano player of the choir. It was a pretty busy time of life, 
+			but not as busy as when I'm in college. 
+			</p>
+		</div>
+		<div class="clearfloat">
+		</div>
+	</div>
+</body>
+</html>
